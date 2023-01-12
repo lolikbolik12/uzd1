@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+void animals() {
+	int age = 30, cat = 12;
+	if (age > 0 && age <= 30) {
+		cout << "correct";
+	}
+	else cout << "incorrect";
+	if (cat > 0 && cat <= 12) {
+		cout << "correct";
+	}
+	else cout << "incorrect";
+}
+void student() {
+	int mark = 0, studentage = 0, height = 0;
+	cout << "Enter your mark";
+	cin >> mark;
+	if (mark > 0 && mark <= 10) {
+		cout << "Your mark exists" << endl;
+	}
+	else cout << "Your mark does not exist" << endl;
+	cout << "Enter your age";
+	cin >> studentage;
+	if (studentage > 0 && studentage <= 18) {
+		cout << "Your age exists" << endl;
+	}
+	else cout << "Your age does not exist" << endl;
+	cout << "Enter your height";
+	cin >> height;
+	if (height > 0 && height < 300) {
+		cout << "Your height exists" << endl;
+	}
+	else cout << "Your height does not exist" << endl;
+}
+void password() {
+	int age = 15;
+	string parole = "Xlebchik3";
+	string parole2;
+	cout << "Enter your password" << endl;
+	cin >> parole2;
+	if (parole == parole2) {
+		cout << age << endl;
+	}
+	else cout << "NO NO NO" << endl;
+}
+int main()
+{
+	int age = 15;
+	string login = "Papaka", login2;
+	int password =12345, password2;
+
+	cout << "___________________\n"<<endl;
+	cout << "Enter your login:";
+	cin >> login2;
+	cout << endl;
+	cout << "Enter your password:";
+	cin >> password2;
+	cout<<"____________________"<<endl;
+	if (login == login2 && password == password2) {
+		cout << age;
+	}
+	else cout << "password or login is wrong";
+	return 0;
+}
