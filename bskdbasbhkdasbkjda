@@ -1,0 +1,100 @@
+#include<iostream>
+using namespace std;
+bool isNumber(string s)
+{
+	for(int i=0;i < s.length();i++)
+		if(isdigit(s[i]) == false)
+			return false;
+	return true;
+}
+void uzd1() {
+	int i = 0;
+	do {
+		i++;
+		cout<<i<<"-"<<i*i<<endl;
+	} while(i<1000);
+}
+
+void uzd2() {
+	string myname;
+
+	do {
+		cout<<"Enter my name"<<endl;
+		cin>>myname;
+		if(myname == "no"){ cout<<"yes"<<endl; };
+	} while(myname != "Chugun");
+}
+
+void uzd3() {
+	string myname;
+	do {
+		cout<<"Enter my name"<<endl;
+		cin>>myname;
+		if(isNumber(myname)){ cout<<"That is a number!"<<endl; };
+	} while(myname != "Papaka");
+}
+
+void uzd4() {
+	string password = "12345";
+	string secpassword;
+	do {
+		cout<<"Enter password"<<endl;
+		cin>>secpassword;
+		if(isNumber(secpassword)){
+		}
+		else {
+			cout<<"That is not a number"<<endl;
+		}
+		if(secpassword!=password){
+			cout<<"Try again!"<<endl;
+		}
+	} while(secpassword != password);
+}
+void uzd5() {
+	string myname;
+	string password = "12345";
+	string secpassword;
+	do {
+		cout<<"Enter my name"<<endl;
+		cin>>myname;
+		if(isNumber(myname)){ cout<<"That is a number!"<<endl; };
+	} while(myname != "Papaka");
+	do {
+		cout<<"Enter password"<<endl;
+		cin>>secpassword;
+		if(isNumber(secpassword)){
+		}
+		else {
+			cout<<"That is not a number"<<endl;
+		}
+		if(secpassword!=password){
+			cout<<"Try again!"<<endl;
+		}
+	} while(secpassword != password);
+}
+
+int main() {
+	int x = 0;
+	string myname;
+	string password = "12345";
+	string secpassword;
+	do {
+		cout<<"Enter my name"<<endl;
+		cin>>myname;
+		if(isNumber(myname)){ cout<<"That is a number!"<<endl; };
+	} while(myname != "Papaka");
+	do {
+		cout<<"Enter password"<<endl;
+		cin>>secpassword;
+		if(isNumber(secpassword)){
+		}
+		else {
+			cout<<"That is not a number"<<endl;
+		}
+		if(secpassword!=password){
+			cout<<"Try again!"<<endl;
+		}
+		x++;
+	} while(secpassword!=password && x<3);
+	return 0;
+} 
