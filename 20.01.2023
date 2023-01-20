@@ -1,0 +1,96 @@
+#include<iostream>
+using namespace std;
+
+void uzd1(){
+	int i = 0;
+
+	do {
+		i++;
+		cout<<i<<"-"<<i*2<<endl;
+	} while(i<100);
+}
+
+void uzd2() {
+	int sk;
+	cout<<"Enter a number:"<<endl;
+	cin>> sk;
+	if(sk<0) {
+		cout<<"Your number is negative";
+	}
+	else if(sk<=20) {
+		cout<<"Your number is < or == 20";
+	}
+	else {
+		cout<<"Your number is > 20";
+	}
+}
+
+void uzd3() {
+	int sk;
+	cout<<"Enter a number:"<<endl;
+	cin>> sk;
+	if(sk<30) {
+		cout<<"Your number is < 30";
+	}
+	else if(sk>100) {
+		cout<<"Your number is > 100";
+	}
+	else {
+		cout<<"Your number is > 30 and < 100";
+	}
+}
+
+void uzd4() {
+	int i = 10;
+	string name;
+	cout<<"Enter your name:"<<endl;
+	cin>>name;
+	while(i<=20) {
+		cout<<name<<endl;
+		i++;
+	}
+	cout<<"I am done";
+}
+
+void uzd5() {
+	int i = 10;
+	while(i>=1) {
+		cout<<i<<endl;
+		i--;
+	}
+}
+void uzd6(){
+	string password="12345";
+	string secpassword;
+	int i = 0;
+	do {
+		cout<<"Enter password"<<endl;
+		cin>> secpassword;
+		if(password!=secpassword){
+			cout<<"Try again!"<<endl;
+		}
+		else {
+			cout<<"Well done"<<endl;
+		}
+		i++;
+	} while(i<2 && password!=secpassword);
+	if(i==2 && password!=secpassword) {
+		cout<<"Sorry you are out";
+	}
+}
+
+int main() {
+	string name;
+	int i = 1,i2=1;
+	while(i<=10) {
+		cout<<"Enter your name:";
+		cin>>name;
+		while(i2<=10) {
+			cout<<name<<endl;
+			i2++;
+		}
+		i2=0;
+		i++;
+	}
+	return 0;
+}
