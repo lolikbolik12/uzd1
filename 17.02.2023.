@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+#include<vector>
+
+void pirmaisuzd() {
+	vector<int> sk{1,2,3,1,2};
+	int i=0;
+	do {
+		if(sk[i]==1) {
+			cout<<i<<". vieta ir 1"<<endl;
+		}
+		else if(sk[i]==4) {
+			cout<<i<<".vieta ir 4"<<endl;
+		}
+		i++;
+	} while(i!=size(sk));
+}
+
+void otraisuzd() {
+	vector<string> c{"USA","UK","China","India","Canada","Australia"};
+	vector<string> num{"+1","+44","+86","+91","+1","+61"};
+	string number;
+	int i=0;
+	bool res=false;
+	string usercode;
+	cout<<"Enter your phone number:";
+	cin>>number;
+	cout<<"Enter code:";
+	cin>>usercode;
+	cout<<usercode<<number<<endl;
+	do {
+		if(num[i]==usercode) {
+			cout<<c[i]<<"-"<<num[i]<<endl;
+			res=true;
+		}
+		i++;
+	} while(i!=size(num));
+	if(res==false) {
+		cout<<"Tadas valsts nav!";
+	}
+}
+
+void tresaisuzd() {
+	vector<int> marks{3,8,7,4};
+	vector<string> names{"Anna","Antons","Vlads","Artemijs"};
+	int i=0;
+	bool res=false;
+	int mark;
+	cout<<"Enter mark:";
+	cin>>mark;
+	while(i!=size(marks)) {
+		if(marks[i]==mark) {
+			cout<<names[i]<<":"<<marks[i];
+			res=true;
+		}
+		i++;
+	}
+	if(res==false) {
+		cout<<"Tadas atzimes nav!";
+	}
+}
+void ceturtaisuzd() {
+	vector<int>a{1,2,3,5,7};
+	int i=0;
+	while(i!=size(a)) {
+		cout<<a[i]<<":"<<a[i]*a[i]<<endl;
+		i++;
+	}
+}
