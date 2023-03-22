@@ -1,0 +1,86 @@
+using namespace std;
+#include<iostream>
+#include<vector>
+
+void first() {
+	vector<int>nums{1,2,3,5,6,3,7,1,2};
+	int i=0;
+	do {
+		if(nums[i]==3) {
+			cout<<"There is 3"<<endl;
+		}
+		if(nums[i]==5) {
+			cout<<"There is 5"<<endl;
+		}
+		i++;
+	} while(i<nums.size());
+	nums.pop_back();
+	nums.at(4)=5;
+	nums.push_back(3);
+
+	i = 0;
+	do {
+		cout<<nums[i]<<endl;
+		i++;
+	} while(i<nums.size());
+}
+
+
+void second() {
+	vector<string>strings{"galds","kresls","lampa","dators","durvis"};
+	int i=0;
+	do {
+		if(strings[i]=="dators"){ cout<<"Glabajas dators"<<endl; }
+		if(strings[i]=="skapis"){ cout<<"Glabajas skapis"<<endl; }
+		i++;
+	} while(i<strings.size());
+
+	strings.pop_back();
+	strings.at(3)="laptop";
+	strings.push_back("logs");
+	i = 0;
+	do {
+		cout<<strings[i]<<endl;
+		i++;
+	} while(i<strings.size());
+}
+
+int main() {
+	vector<string>countries{"USA","UK","China","India","Canada","Australia"};
+	vector<string>codes{"+1","+44","+86","91","+1","+61"};
+	int i=0;
+	bool res=false;
+	string c,num;
+	cout<<"Enter your country:"<<endl;
+	cin>>c;
+	do {
+		if(countries[i]==c){ cout<<countries[i]<<":"<<codes[i]<<endl;res=true; }
+		i++;
+	} while(i<countries.size());
+	if(res==false){
+		cout<<"Tada koda nav"<<endl;
+	}
+	i=0;
+	res=false;
+	cout<<"Enter your country code:"<<endl;
+	cin>>num;
+	do {
+		if(codes[i]==num){ cout<<codes[i]<<":"<<countries[i]<<endl;res=true; }
+		i++;
+	} while(i<codes.size());
+	if(res==false){
+		cout<<"Tadas valsts nav"<<endl;
+	}
+	countries.at(1)="Igaunija";
+	codes.at(1)="372";
+	countries.pop_back();
+	codes.pop_back();
+	countries.push_back("Latvia");
+	codes.push_back("+371");
+	i=0;
+	do{
+		cout<<countries[i]<<":"<<codes[i]<<endl;
+		i++;
+	} while(i<codes.size());
+	return 0;
+}
